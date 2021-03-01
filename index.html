@@ -5,6 +5,8 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
 <meta name="theme-color" content="#222">
 <meta name="generator" content="Hexo 5.4.0">
+
+
   <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
   <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
   <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
@@ -13,14 +15,15 @@
 <link rel="stylesheet" href="/css/main.css">
 
 
-<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
 
-<script id="hexo-configurations">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.2/css/all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.1.1/animate.min.css">
+
+<script class="hexo-configurations">
     var NexT = window.NexT || {};
-    var CONFIG = {"hostname":"aimedarxie.github.io","root":"/","scheme":"Muse","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
+    var CONFIG = {"hostname":"aimedarxie.github.io","root":"/","images":"/images","scheme":"Muse","version":"8.2.2","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":false,"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"}};
   </script>
-
-  <meta name="description" content="施工中，试运营">
+<meta name="description" content="施工中，试运营">
 <meta property="og:type" content="website">
 <meta property="og:title" content="艾梅达尔的阁楼">
 <meta property="og:url" content="http://aimedarxie.github.io/index.html">
@@ -30,10 +33,11 @@
 <meta property="article:author" content="艾梅达尔">
 <meta name="twitter:card" content="summary">
 
+
 <link rel="canonical" href="http://aimedarxie.github.io/">
 
 
-<script id="page-configurations">
+<script class="page-configurations">
   // https://hexo.io/docs/variables.html
   CONFIG.page = {
     sidebar: "",
@@ -42,60 +46,66 @@
     lang   : 'zh-CN'
   };
 </script>
-
-  <title>艾梅达尔的阁楼</title>
+<title>艾梅达尔的阁楼</title>
   
-
-
 
 
 
 
   <noscript>
   <style>
-  .use-motion .brand,
+  body { margin-top: 2rem; }
+
   .use-motion .menu-item,
-  .sidebar-inner,
+  .use-motion .sidebar,
   .use-motion .post-block,
   .use-motion .pagination,
   .use-motion .comments,
   .use-motion .post-header,
   .use-motion .post-body,
-  .use-motion .collection-header { opacity: initial; }
+  .use-motion .collection-header {
+    visibility: visible;
+  }
+
+  .use-motion .header,
+  .use-motion .site-brand-container .toggle,
+  .use-motion .footer { opacity: initial; }
 
   .use-motion .site-title,
-  .use-motion .site-subtitle {
+  .use-motion .site-subtitle,
+  .use-motion .custom-logo-image {
     opacity: initial;
     top: initial;
   }
 
-  .use-motion .logo-line-before i { left: initial; }
-  .use-motion .logo-line-after i { right: initial; }
+  .use-motion .logo-line {
+    transform: scaleX(1);
+  }
+
+  .search-pop-overlay, .sidebar-nav { display: none; }
+  .sidebar-panel { display: block; }
   </style>
 </noscript>
 
 </head>
 
-<body itemscope itemtype="http://schema.org/WebPage">
-  <div class="container use-motion">
-    <div class="headband"></div>
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
 
+  <main class="main">
     <header class="header" itemscope itemtype="http://schema.org/WPHeader">
       <div class="header-inner"><div class="site-brand-container">
   <div class="site-nav-toggle">
-    <div class="toggle" aria-label="切换导航栏">
-      <span class="toggle-line toggle-line-first"></span>
-      <span class="toggle-line toggle-line-middle"></span>
-      <span class="toggle-line toggle-line-last"></span>
+    <div class="toggle" aria-label="切换导航栏" role="button">
     </div>
   </div>
 
   <div class="site-meta">
 
     <a href="/" class="brand" rel="start">
-      <span class="logo-line-before"><i></i></span>
+      <i class="logo-line"></i>
       <h1 class="site-title">艾梅达尔的阁楼</h1>
-      <span class="logo-line-after"><i></i></span>
+      <i class="logo-line"></i>
     </a>
   </div>
 
@@ -108,50 +118,89 @@
 
 
 
-<nav class="site-nav">
-  <ul id="menu" class="main-menu menu">
-        <li class="menu-item menu-item-home">
-
-    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a>
-
-  </li>
-        <li class="menu-item menu-item-tags">
-
-    <a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a>
-
-  </li>
-        <li class="menu-item menu-item-archives">
-
-    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a>
-
-  </li>
-  </ul>
-</nav>
-
 
 
 
 </div>
+        
+  
+  <div class="toggle sidebar-toggle" role="button">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
+
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-overview-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author site-overview-item animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <p class="site-author-name" itemprop="name">艾梅达尔</p>
+  <div class="site-description" itemprop="description">施工中，试运营</div>
+</div>
+<div class="site-state-wrap site-overview-item animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives">
+          <span class="site-state-item-count">11</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+        <span class="site-state-item-count">3</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+
+
+
+        </div>
+      </div>
+    </div>
+  </aside>
+  <div class="sidebar-dimmer"></div>
+
+
     </header>
 
     
-  <div class="back-to-top">
+  <div class="back-to-top" role="button">
     <i class="fa fa-arrow-up"></i>
     <span>0%</span>
   </div>
 
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
 
-    <main class="main">
-      <div class="main-inner">
-        <div class="content-wrap">
-          
 
-          <div class="content index posts-expand">
-            
-      
+    <div class="main-inner index posts-expand">
+
+    
+
+
+<div class="post-block">
   
   
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
     <link itemprop="mainEntityOfPage" href="http://aimedarxie.github.io/2021/03/01/%E5%BB%BA%E7%AB%99%E6%97%A5%E5%BF%97-4/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -165,22 +214,23 @@
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2021/03/01/%E5%BB%BA%E7%AB%99%E6%97%A5%E5%BF%97-4/" class="post-title-link" itemprop="url">建站日志_4</a>
+          <a href="/2021/03/01/%E5%BB%BA%E7%AB%99%E6%97%A5%E5%BF%97-4/" class="post-title-link" itemprop="url">建站日志_4</a>
         </h2>
 
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-              
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+      
 
-              <time title="创建时间：2021-03-01 10:00:00 / 修改时间：10:06:17" itemprop="dateCreated datePublished" datetime="2021-03-01T10:00:00+08:00">2021-03-01</time>
-            </span>
+      <time title="创建时间：2021-03-01 10:00:00 / 修改时间：10:06:17" itemprop="dateCreated datePublished" datetime="2021-03-01T10:00:00+08:00">2021-03-01</time>
+    </span>
 
-          
+  
+</div>
 
         </div>
       </header>
@@ -189,8 +239,6 @@
     
     
     <div class="post-body" itemprop="articleBody">
-
-      
           <p>第一次尝试更新hexo和next的版本<br>目前看来有很多问题，陷入混沌<br>比如more的语句不能被识别了<br>等搞好了再写一篇吧，现在只能凑活着看了</p>
  <span id="more"></span>
 
@@ -209,18 +257,25 @@
     
     
     
-      <footer class="post-footer">
+
+    <footer class="post-footer">
         <div class="post-eof"></div>
-      </footer>
+      
+    </footer>
   </article>
-  
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
   
   
 
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
     <link itemprop="mainEntityOfPage" href="http://aimedarxie.github.io/2021/02/28/%E8%87%B4%E5%AF%8C-3/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -234,22 +289,29 @@
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2021/02/28/%E8%87%B4%E5%AF%8C-3/" class="post-title-link" itemprop="url">致富_3</a>
+          <a href="/2021/02/28/%E8%87%B4%E5%AF%8C-3/" class="post-title-link" itemprop="url">致富_3</a>
         </h2>
 
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-              
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
 
-              <time title="创建时间：2021-02-28 15:00:00 / 修改时间：19:15:26" itemprop="dateCreated datePublished" datetime="2021-02-28T15:00:00+08:00">2021-02-28</time>
-            </span>
+      <time title="创建时间：2021-02-28 15:00:00" itemprop="dateCreated datePublished" datetime="2021-02-28T15:00:00+08:00">2021-02-28</time>
+    </span>
+      <span class="post-meta-item">
+        <span class="post-meta-item-icon">
+          <i class="far fa-calendar-check"></i>
+        </span>
+        <span class="post-meta-item-text">更新于</span>
+        <time title="修改时间：2021-03-01 11:15:40" itemprop="dateModified" datetime="2021-03-01T11:15:40+08:00">2021-03-01</time>
+      </span>
 
-          
+  
+</div>
 
         </div>
       </header>
@@ -258,12 +320,9 @@
     
     
     <div class="post-body" itemprop="articleBody">
-
-      
           <p>旧友泻药同志深夜来电，起手式就是关于时间性的哲学讨论。我又惊又喜，正想着我该怎么装作对这问题有所思考；结果话题一转，他告诉我，昨天我和他和他妈去余杭的在建楼盘看房，今天上午就签了购房合同。我松了一口气，又倒吸了一口气，一进一出就显得很平淡自如。</p>
  <span id="more"></span>
 
-<p>旧友泻药同志深夜来电，起手式就是关于时间性的哲学讨论。我又惊又喜，正想着我该怎么装作对这问题有所思考；结果话题一转，他告诉我，昨天我和他和他妈去余杭的在建楼盘看房，今天上午就签了购房合同。我松了一口气，又倒吸了一口气，一出一进就显得很平淡自如。</p>
 <p>他有自己的焦虑，我也有我的——但终归逃不出年轻人对未来的迷茫。他觉得每个月的分期还款让他突然感受到了生存的代价，觉得从无忧无虑的校园幻梦中惊醒，但又不知道该怎么生存。我建议他多问问学长，仔细看看别人的生活，喜欢就有样学样，不喜欢就溜之大吉。我他妈的哪儿有资格说这话。</p>
 <p>房子的思考，以及关于这一个十年 年轻人的焦虑。</p>
 <ol>
@@ -296,18 +355,25 @@
     
     
     
-      <footer class="post-footer">
+
+    <footer class="post-footer">
         <div class="post-eof"></div>
-      </footer>
+      
+    </footer>
   </article>
-  
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
   
   
 
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
     <link itemprop="mainEntityOfPage" href="http://aimedarxie.github.io/2021/02/17/%E5%BB%BA%E7%AB%99%E6%97%A5%E5%BF%97-3/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -321,22 +387,23 @@
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2021/02/17/%E5%BB%BA%E7%AB%99%E6%97%A5%E5%BF%97-3/" class="post-title-link" itemprop="url">建站日志_3</a>
+          <a href="/2021/02/17/%E5%BB%BA%E7%AB%99%E6%97%A5%E5%BF%97-3/" class="post-title-link" itemprop="url">建站日志_3</a>
         </h2>
 
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-              
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+      
 
-              <time title="创建时间：2021-02-17 23:21:00 / 修改时间：23:25:39" itemprop="dateCreated datePublished" datetime="2021-02-17T23:21:00+08:00">2021-02-17</time>
-            </span>
+      <time title="创建时间：2021-02-17 23:21:00 / 修改时间：23:25:39" itemprop="dateCreated datePublished" datetime="2021-02-17T23:21:00+08:00">2021-02-17</time>
+    </span>
 
-          
+  
+</div>
 
         </div>
       </header>
@@ -345,8 +412,6 @@
     
     
     <div class="post-body" itemprop="articleBody">
-
-      
           <p>我发现了一个很不错的教程：<a target="_blank" rel="noopener" href="https://easyhexo.com/">https://easyhexo.com/</a><br>提供一站式的 Hexo 教程，而且是中文，还有B站视频。好耶！</p>
  <span id="more"></span>
 
@@ -365,18 +430,25 @@
     
     
     
-      <footer class="post-footer">
+
+    <footer class="post-footer">
         <div class="post-eof"></div>
-      </footer>
+      
+    </footer>
   </article>
-  
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
   
   
 
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
     <link itemprop="mainEntityOfPage" href="http://aimedarxie.github.io/2021/02/16/%E4%BA%BA%E9%97%B4%E9%94%99%E9%A2%98%E9%9B%86-2/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -390,28 +462,29 @@
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2021/02/16/%E4%BA%BA%E9%97%B4%E9%94%99%E9%A2%98%E9%9B%86-2/" class="post-title-link" itemprop="url">人间错题集-2</a>
+          <a href="/2021/02/16/%E4%BA%BA%E9%97%B4%E9%94%99%E9%A2%98%E9%9B%86-2/" class="post-title-link" itemprop="url">人间错题集-2</a>
         </h2>
 
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
 
-              <time title="创建时间：2021-02-16 13:00:00" itemprop="dateCreated datePublished" datetime="2021-02-16T13:00:00+08:00">2021-02-16</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2021-02-28 17:42:57" itemprop="dateModified" datetime="2021-02-28T17:42:57+08:00">2021-02-28</time>
-              </span>
+      <time title="创建时间：2021-02-16 13:00:00" itemprop="dateCreated datePublished" datetime="2021-02-16T13:00:00+08:00">2021-02-16</time>
+    </span>
+      <span class="post-meta-item">
+        <span class="post-meta-item-icon">
+          <i class="far fa-calendar-check"></i>
+        </span>
+        <span class="post-meta-item-text">更新于</span>
+        <time title="修改时间：2021-02-28 17:42:57" itemprop="dateModified" datetime="2021-02-28T17:42:57+08:00">2021-02-28</time>
+      </span>
 
-          
+  
+</div>
 
         </div>
       </header>
@@ -420,8 +493,6 @@
     
     
     <div class="post-body" itemprop="articleBody">
-
-      
           <p>Aimedar删了狮子的好友。</p>
 <p>关系可能要告一段落了。（2020.8.16-2021.1.23）</p>
 <span id="more"></span>
@@ -470,18 +541,25 @@
     
     
     
-      <footer class="post-footer">
+
+    <footer class="post-footer">
         <div class="post-eof"></div>
-      </footer>
+      
+    </footer>
   </article>
-  
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
   
   
 
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
     <link itemprop="mainEntityOfPage" href="http://aimedarxie.github.io/2020/12/01/%E4%BA%BA%E9%97%B4%E9%94%99%E9%A2%98%E9%9B%86-1/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -495,28 +573,29 @@
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2020/12/01/%E4%BA%BA%E9%97%B4%E9%94%99%E9%A2%98%E9%9B%86-1/" class="post-title-link" itemprop="url">人间错题集-1</a>
+          <a href="/2020/12/01/%E4%BA%BA%E9%97%B4%E9%94%99%E9%A2%98%E9%9B%86-1/" class="post-title-link" itemprop="url">人间错题集-1</a>
         </h2>
 
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
 
-              <time title="创建时间：2020-12-01 20:36:19" itemprop="dateCreated datePublished" datetime="2020-12-01T20:36:19+08:00">2020-12-01</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2021-02-16 12:59:38" itemprop="dateModified" datetime="2021-02-16T12:59:38+08:00">2021-02-16</time>
-              </span>
+      <time title="创建时间：2020-12-01 20:36:19" itemprop="dateCreated datePublished" datetime="2020-12-01T20:36:19+08:00">2020-12-01</time>
+    </span>
+      <span class="post-meta-item">
+        <span class="post-meta-item-icon">
+          <i class="far fa-calendar-check"></i>
+        </span>
+        <span class="post-meta-item-text">更新于</span>
+        <time title="修改时间：2021-02-16 12:59:38" itemprop="dateModified" datetime="2021-02-16T12:59:38+08:00">2021-02-16</time>
+      </span>
 
-          
+  
+</div>
 
         </div>
       </header>
@@ -525,8 +604,6 @@
     
     
     <div class="post-body" itemprop="articleBody">
-
-      
           <p>狮子：我觉得我不被需要。我觉得你对我一无所求。</p>
 <p>Aimedar：一个小视频：<a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1hb4115724">https://www.bilibili.com/video/BV1hb4115724</a><br>      一段童年阴影故事：讲述自己小学时是一个怎样的鸡蛋。如何利用别人的好感而不知，以及报复性的自我厌恶。</p>
  <span id="more"></span>
@@ -554,18 +631,25 @@
     
     
     
-      <footer class="post-footer">
+
+    <footer class="post-footer">
         <div class="post-eof"></div>
-      </footer>
+      
+    </footer>
   </article>
-  
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
   
   
 
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
     <link itemprop="mainEntityOfPage" href="http://aimedarxie.github.io/2020/12/01/%E4%BA%BA%E9%97%B4%E9%94%99%E9%A2%98%E9%9B%86-0/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -579,22 +663,23 @@
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2020/12/01/%E4%BA%BA%E9%97%B4%E9%94%99%E9%A2%98%E9%9B%86-0/" class="post-title-link" itemprop="url">人间错题集-0</a>
+          <a href="/2020/12/01/%E4%BA%BA%E9%97%B4%E9%94%99%E9%A2%98%E9%9B%86-0/" class="post-title-link" itemprop="url">人间错题集-0</a>
         </h2>
 
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-              
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+      
 
-              <time title="创建时间：2020-12-01 14:38:49 / 修改时间：16:35:16" itemprop="dateCreated datePublished" datetime="2020-12-01T14:38:49+08:00">2020-12-01</time>
-            </span>
+      <time title="创建时间：2020-12-01 14:38:49 / 修改时间：16:35:16" itemprop="dateCreated datePublished" datetime="2020-12-01T14:38:49+08:00">2020-12-01</time>
+    </span>
 
-          
+  
+</div>
 
         </div>
       </header>
@@ -603,8 +688,6 @@
     
     
     <div class="post-body" itemprop="articleBody">
-
-      
           <p>他人即地狱。萨特如是说。<br>但是地狱说到底只是一种选择，关键是意识到选择之后的选择。自由却又互为枷锁的我们应该如何在地狱中生存？</p>
 <p>我活在人间。我常常犯错。我想学习与人相处的道与术。这本错题集就是为此准备的。</p>
 
@@ -622,18 +705,25 @@
     
     
     
-      <footer class="post-footer">
+
+    <footer class="post-footer">
         <div class="post-eof"></div>
-      </footer>
+      
+    </footer>
   </article>
-  
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
   
   
 
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
     <link itemprop="mainEntityOfPage" href="http://aimedarxie.github.io/2020/09/13/%E8%87%B4%E5%AF%8C-2/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -647,22 +737,23 @@
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2020/09/13/%E8%87%B4%E5%AF%8C-2/" class="post-title-link" itemprop="url">致富_2</a>
+          <a href="/2020/09/13/%E8%87%B4%E5%AF%8C-2/" class="post-title-link" itemprop="url">致富_2</a>
         </h2>
 
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-              
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+      
 
-              <time title="创建时间：2020-09-13 15:27:45 / 修改时间：20:59:55" itemprop="dateCreated datePublished" datetime="2020-09-13T15:27:45+08:00">2020-09-13</time>
-            </span>
+      <time title="创建时间：2020-09-13 15:27:45 / 修改时间：20:59:55" itemprop="dateCreated datePublished" datetime="2020-09-13T15:27:45+08:00">2020-09-13</time>
+    </span>
 
-          
+  
+</div>
 
         </div>
       </header>
@@ -671,8 +762,6 @@
     
     
     <div class="post-body" itemprop="articleBody">
-
-      
           <p>出卖自己和自我价值实现的区别在哪里？都是变现。</p>
  <span id="more"></span>
 
@@ -694,18 +783,25 @@
     
     
     
-      <footer class="post-footer">
+
+    <footer class="post-footer">
         <div class="post-eof"></div>
-      </footer>
+      
+    </footer>
   </article>
-  
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
   
   
 
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
     <link itemprop="mainEntityOfPage" href="http://aimedarxie.github.io/2020/05/24/%E8%87%B4%E5%AF%8C-1/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -719,22 +815,23 @@
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2020/05/24/%E8%87%B4%E5%AF%8C-1/" class="post-title-link" itemprop="url">致富_1</a>
+          <a href="/2020/05/24/%E8%87%B4%E5%AF%8C-1/" class="post-title-link" itemprop="url">致富_1</a>
         </h2>
 
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-              
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+      
 
-              <time title="创建时间：2020-05-24 18:35:40 / 修改时间：18:46:52" itemprop="dateCreated datePublished" datetime="2020-05-24T18:35:40+08:00">2020-05-24</time>
-            </span>
+      <time title="创建时间：2020-05-24 18:35:40 / 修改时间：18:46:52" itemprop="dateCreated datePublished" datetime="2020-05-24T18:35:40+08:00">2020-05-24</time>
+    </span>
 
-          
+  
+</div>
 
         </div>
       </header>
@@ -743,8 +840,6 @@
     
     
     <div class="post-body" itemprop="articleBody">
-
-      
           <p>一点点兼职的时薪是19r<br>如果我想换一个4000r的机，大概需要25d * 8h</p>
  <span id="more"></span>
 
@@ -767,18 +862,25 @@
     
     
     
-      <footer class="post-footer">
+
+    <footer class="post-footer">
         <div class="post-eof"></div>
-      </footer>
+      
+    </footer>
   </article>
-  
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
   
   
 
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
     <link itemprop="mainEntityOfPage" href="http://aimedarxie.github.io/2020/05/23/%E8%87%B4%E5%AF%8C-0/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -792,22 +894,23 @@
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2020/05/23/%E8%87%B4%E5%AF%8C-0/" class="post-title-link" itemprop="url">致富_0</a>
+          <a href="/2020/05/23/%E8%87%B4%E5%AF%8C-0/" class="post-title-link" itemprop="url">致富_0</a>
         </h2>
 
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-              
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+      
 
-              <time title="创建时间：2020-05-23 01:20:46 / 修改时间：01:40:04" itemprop="dateCreated datePublished" datetime="2020-05-23T01:20:46+08:00">2020-05-23</time>
-            </span>
+      <time title="创建时间：2020-05-23 01:20:46 / 修改时间：01:40:04" itemprop="dateCreated datePublished" datetime="2020-05-23T01:20:46+08:00">2020-05-23</time>
+    </span>
 
-          
+  
+</div>
 
         </div>
       </header>
@@ -816,8 +919,6 @@
     
     
     <div class="post-body" itemprop="articleBody">
-
-      
           <p>有的时候觉得自己很穷，有的时候觉得自己不穷。但从没觉得自己富裕。</p>
 <p>这个专栏讨论致富。我想做一个富足的人。无论是哪个方面，用何种手段。</p>
 
@@ -835,18 +936,25 @@
     
     
     
-      <footer class="post-footer">
+
+    <footer class="post-footer">
         <div class="post-eof"></div>
-      </footer>
+      
+    </footer>
   </article>
-  
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
   
   
 
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
     <link itemprop="mainEntityOfPage" href="http://aimedarxie.github.io/2020/04/30/%E5%BB%BA%E7%AB%99%E6%97%A5%E5%BF%97-2/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -860,22 +968,23 @@
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2020/04/30/%E5%BB%BA%E7%AB%99%E6%97%A5%E5%BF%97-2/" class="post-title-link" itemprop="url">建站日志_2</a>
+          <a href="/2020/04/30/%E5%BB%BA%E7%AB%99%E6%97%A5%E5%BF%97-2/" class="post-title-link" itemprop="url">建站日志_2</a>
         </h2>
 
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-              
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+      
 
-              <time title="创建时间：2020-04-30 17:06:43 / 修改时间：17:20:01" itemprop="dateCreated datePublished" datetime="2020-04-30T17:06:43+08:00">2020-04-30</time>
-            </span>
+      <time title="创建时间：2020-04-30 17:06:43 / 修改时间：17:20:01" itemprop="dateCreated datePublished" datetime="2020-04-30T17:06:43+08:00">2020-04-30</time>
+    </span>
 
-          
+  
+</div>
 
         </div>
       </header>
@@ -884,8 +993,6 @@
     
     
     <div class="post-body" itemprop="articleBody">
-
-      
           <p>启发我建站的博客是《小黑屋》，这也是一个个人博客。我猜测博主是研二的同学，物化相关的实验室。我看到他做了一些学习整理，虽然毫无学术意义，但是至少是一种个人总结与输出。我很受启发。</p>
  <span id="more"></span>
 
@@ -911,24 +1018,21 @@
     
     
     
-      <footer class="post-footer">
+
+    <footer class="post-footer">
         <div class="post-eof"></div>
-      </footer>
+      
+    </footer>
   </article>
-  
-  
-  
+</div>
 
 
-  
+
+
   <nav class="pagination">
     <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="extend next" rel="next" href="/page/2/"><i class="fa fa-angle-right" aria-label="下一页"></i></a>
   </nav>
 
-
-
-          </div>
-          
 
 <script>
   window.addEventListener('tabs:register', () => {
@@ -937,7 +1041,7 @@
       activeClass = localStorage.getItem('comments_active') || activeClass;
     }
     if (activeClass) {
-      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      const activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
       if (activeTab) {
         activeTab.click();
       }
@@ -946,86 +1050,19 @@
   if (CONFIG.comments.storage) {
     window.addEventListener('tabs:click', event => {
       if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
-      let commentClass = event.target.classList[1];
+      const commentClass = event.target.classList[1];
       localStorage.setItem('comments_active', commentClass);
     });
   }
 </script>
-
-        </div>
-          
-  
-  <div class="toggle sidebar-toggle">
-    <span class="toggle-line toggle-line-first"></span>
-    <span class="toggle-line toggle-line-middle"></span>
-    <span class="toggle-line toggle-line-last"></span>
-  </div>
-
-  <aside class="sidebar">
-    <div class="sidebar-inner">
-
-      <ul class="sidebar-nav motion-element">
-        <li class="sidebar-nav-toc">
-          文章目录
-        </li>
-        <li class="sidebar-nav-overview">
-          站点概览
-        </li>
-      </ul>
-
-      <!--noindex-->
-      <div class="post-toc-wrap sidebar-panel">
-      </div>
-      <!--/noindex-->
-
-      <div class="site-overview-wrap sidebar-panel">
-        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
-  <p class="site-author-name" itemprop="name">艾梅达尔</p>
-  <div class="site-description" itemprop="description">施工中，试运营</div>
 </div>
-<div class="site-state-wrap motion-element">
-  <nav class="site-state">
-      <div class="site-state-item site-state-posts">
-          <a href="/archives/">
-        
-          <span class="site-state-item-count">11</span>
-          <span class="site-state-item-name">日志</span>
-        </a>
-      </div>
-      <div class="site-state-item site-state-tags">
-            <a href="/tags/">
-          
-        <span class="site-state-item-count">3</span>
-        <span class="site-state-item-name">标签</span></a>
-      </div>
-  </nav>
-</div>
-  <div class="links-of-author motion-element">
-      <span class="links-of-author-item">
-        <a href="mailto:597796837@qq.com" title="E-Mail → mailto:597796837@qq.com" rel="noopener" target="_blank"><i class="fa fa-envelope fa-fw"></i>E-Mail</a>
-      </span>
-  </div>
+  </main>
 
+  <footer class="footer">
+    <div class="footer-inner">
 
-
-      </div>
-
-    </div>
-  </aside>
-  <div id="sidebar-dimmer"></div>
-
-
-      </div>
-    </main>
-
-    <footer class="footer">
-      <div class="footer-inner">
-        
-
-        
 
 <div class="copyright">
-  
   &copy; 
   <span itemprop="copyrightYear">2021</span>
   <span class="with-love">
@@ -1033,56 +1070,19 @@
   </span>
   <span class="author" itemprop="copyrightHolder">艾梅达尔</span>
 </div>
-  <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://muse.theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Muse</a> 强力驱动
+  <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/muse/" class="theme-link" rel="noopener" target="_blank">NexT.Muse</a> 强力驱动
   </div>
 
-        
-<div class="busuanzi-count">
-  <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
-    <span class="post-meta-item" id="busuanzi_container_site_uv" style="display: none;">
-      <span class="post-meta-item-icon">
-        <i class="fa fa-user"></i>
-      </span>
-      <span class="site-uv" title="总访客量">
-        <span id="busuanzi_value_site_uv"></span>
-      </span>
-    </span>
-    <span class="post-meta-divider">|</span>
-    <span class="post-meta-item" id="busuanzi_container_site_pv" style="display: none;">
-      <span class="post-meta-item-icon">
-        <i class="fa fa-eye"></i>
-      </span>
-      <span class="site-pv" title="总访问量">
-        <span id="busuanzi_value_site_pv"></span>
-      </span>
-    </span>
-</div>
-
-
-
-
-
-
-
-
-      </div>
-    </footer>
-  </div>
+    </div>
+  </footer>
 
   
-  <script src="/lib/anime.min.js"></script>
-  <script src="/lib/velocity/velocity.min.js"></script>
-  <script src="/lib/velocity/velocity.ui.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/animejs@3.2.1/lib/anime.min.js"></script>
+<script src="/js/utils.js"></script><script src="/js/motion.js"></script><script src="/js/schemes/muse.js"></script><script src="/js/next-boot.js"></script>
 
-<script src="/js/utils.js"></script>
-
-<script src="/js/motion.js"></script>
+  
 
 
-<script src="/js/schemes/muse.js"></script>
-
-
-<script src="/js/next-boot.js"></script>
 
 
 
@@ -1092,20 +1092,6 @@
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-  
-
-  
 
 </body>
 </html>
